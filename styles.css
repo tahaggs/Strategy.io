@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#top-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+canvas {
+    display: block;
+    background: #87CEEB;
+    margin: 20px auto;
+}
