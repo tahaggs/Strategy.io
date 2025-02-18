@@ -3,21 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turn-Based Strategy Game</title>
+    <title>Strategy Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="top-bar">
-        <span id="materials">Materials: 100</span>
-        <span id="units">Units: 0</span>
-        <span id="area">Controlled Area: 0</span>
-        <button id="build-barracks">Build Barracks (25)</button>
-        <button id="train-warrior">Train Warrior (50)</button>
-        <button id="train-archer">Train Archer (100)</button>
-        <button id="train-defender">Train Defender (75)</button>
-        <button id="end-turn">End Turn</button>
+    <h1>Strategy Game</h1>
+
+    <div class="menu">
+        <label for="difficulty">Select AI Difficulty:</label>
+        <select id="difficulty">
+            <option value="Easy">Easy</option>
+            <option value="Medium" selected>Medium</option>
+            <option value="Hard">Hard</option>
+        </select>
+        <button onclick="startGame()">Start Game</button>
     </div>
+
+    <div class="game-info">
+        <p id="gold">Gold: 1000</p>
+        <p id="territory">Territory: 0%</p>
+    </div>
+
     <canvas id="gameCanvas"></canvas>
+
+    <div class="controls">
+        <button onclick="buyUnit('soldier')">Buy Soldier (500G)</button>
+        <button onclick="buyUnit('tank')">Buy Tank (1000G)</button>
+        <button onclick="buyUnit('defender')">Buy Defender (750G)</button>
+    </div>
+
     <script src="game.js"></script>
 </body>
 </html>
